@@ -1,0 +1,206 @@
+Form Collector - PHP Edition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Introduction
+------------
+
+The Three Wise Men Form Collector is a system that lets your web site
+receive forms hold the information for later retrieval by an authorized
+individual.
+
+It is an excellent alternative to "mail gateways" that take form
+information and e-mail them to that authorized individual. There are
+several reasons you may wish to use Form Collector instead of a "mail
+gateway":
+
+1. Increased Security
+
+Email is insecure, and can be intercepted and read on its way to your
+computer. While it is possible to send secure email (via authentication
+and signing technologies like PGP), most users do not have the patience
+to set something like this up.
+
+You can protect the forms and the Form Collector behind an SSL secured web
+server. This ensures that private information is kept private.
+
+2. Increased Convenience
+
+Email is typically received at a single computer. If you would like to
+monitor your form responses you can do so from any computer by logging in
+to your Form Collector administration. This also makes it convenient to
+share posted form data among several people.
+
+If you use Form Collector to conduct surveys or polls, it will
+conveniently format the responses in a way that is easily downloaded and
+analyzed by your spreadsheet.
+
+Frequently Asked Questions
+--------------------------
+
+Q. But I like receiving email when users fill out my forms!
+
+A. No problem! Form Collector can send you notification when new responses
+   arrive, it just won't send any (potentially private) information from
+   the response to you by email.
+
+Q. Do I have to do any special programming on my forms?
+
+A. No. You can direct any web form to Form Collector just as you might
+   have used an email gateway. Form Collector lets you label the fields
+   too, to make them easier to understand.
+
+   Be careful using Checkbox form elements, however - each combination
+   of checkbox options will appear to be a new form. You are best to avoid
+   checkbox elements in favour of a pair of radio-buttons.
+
+System Requirements
+-------------------
+
+Form Collector requires that your web server support PHP version 4.1.0 or
+higher.
+
+Installation
+------------
+
+Go to where you unpacked this distribution, and edit the
+web/config.ini file. This file contains the configuration settings for your
+Form Collector installation.
+
+The configuration is broken into 2 sections, "default" and "email".
+
+In the default section, you'll see two lines, one starting with 'datafile'
+and one starting with 'licensee'. Change the text after the '=' sign
+to suit your installation.
+
+datafile - this is the data file that contains all of your responses. It
+           is scrambled to protect private information
+
+licensee - this is the name of the licensee of the software (your company
+           name, or your client's company name normally goes here)
+
+ie.
+
+[default]
+datafile = /vhome/domainname.com/httpdocs/fc/private.dat
+licensee = Three Wise Men
+
+In the email section, you'll see two lines, one starting with 'identifier'
+and one starting with 'fromaddress'.
+
+identifier  - this is the prefix used in the Subject line of your
+              notification emails
+fromaddress - this is the email address from whom the notification emails
+              are sent.
+
+ie.
+
+[email]
+identifier = Form Collector
+fromaddress = Form Collector <info@yourdomain.com>
+
+Create a folder on your web site to hold FormCollector, and FTP all of
+the files under the web/ folder into it.
+
+Open the Form Collector's index.php in your web browser. If you uploaded
+the files in a folder called "admin" for example, open your browser to "
+http://domainname.com/admin/". You should see the Form Collector
+installation screen.
+
+You will have to enter a password (to protect access to the application)
+and an email address (to receive notifications when new postings arrive).
+
+After you fill out the installation form, an empty DATAFILE will be
+created for you. At this point, if you log into the Form Collector you
+will not see any forms because none have posted to the Form Collector yet.
+
+In order to see a form in the Form Collector, you must post from your
+form!
+
+Making Forms
+------------
+
+Any HTML form is compatible with Form Collector, you just have to set the
+form's "action" and a target to where the visitor will be forwarded after
+a successful form posting.
+
+That said, you should avoid using Checkbox elements on your forms. When
+a form contains a checkbox, unless you take extra precautions, there is
+no way for Form Collector to know that the element was in the form unless
+it was actually checked. This will make a form with a checkbox look like
+actually two different forms, one with it checked, and one without. Web
+developers are often familiar with this situation, and may have their
+own way of dealing with it. The easy way out is to avoid checkbox
+elements and use two radio-buttons instead or a pulldown-menu instead.
+
+The Form Collector receptor is called "receptor.php", this file will
+become the target for any of your forms. For example, here is a simple
+form:
+
+  <form method="post" action="/admin/receptor.php">
+  <input type="hidden"
+         name="target"
+         value="http://domainname.com/thankyou.html">
+  <input type="hidden" name="debug" value="yes">
+  <input type="text" name="name">
+  <input type="submit">
+  </form>
+
+This form assumes that you uploaded Form Collector to a folder called
+"admin" on your web site.
+
+Notice the two hidden fields - target and debug. These will be somewhat
+familiar if you have used email gateways in the past.
+
+target - where to forward the browser after submitting the form data,
+         normally this would be some kind of thank-you page
+debug  - instead of forwarding the browser, output what data was
+         submitted
+
+Note that when debug is specified, the browser does not forward to the
+target after the form is posted, nor is the posted data actually stored
+within Form Collector. It is good practice to leave both lines in while
+building your form, and then remove the debug line for final testing.
+
+Customizing The Form Display
+----------------------------
+
+The administrative interface should be fairly easy to navigate for you.
+Note that you can customize the names of the form fields that are
+displayed to the site administrator. This can be convenient if you have
+short field names in the form, and want to show more descriptive labels.
+
+Downloading Posted Data
+-----------------------
+
+You can download the posted data at any time, the format is CSV which
+opens nicely in spreadsheet programs.
+
+You may find it convenient (especially on higher traffic sites) to
+download and collect the form postings in a local spreadsheet file and
+clear the responses on the server. While the server can likely handle
+hundreds or even thousands of responses before it starts to visibly slow
+down, it is good practice to keep a local backup of your information.
+
+Canadian Privacy Legislation
+----------------------------
+
+Canadian businesses are required by law starting January 2004 to adhere to
+Bill C6, the Personal Information Protection and Electronic Documents Act.
+
+Under this new legislation you are responsible for the way you handle your
+clients' personal information.
+
+If you collect personal information from individuals, you are required to
+state why you are collecting that information, and you are only allowed to
+use it for that particular purpose.
+
+Individuals are entitled to request access to any personal information you
+might have on file for them.
+
+You must take measures to ensure that any personal information that you
+collect remains protected - you are responsible!
+
+For more information on the PIPEDA legislation, and privacy issues as they
+affect individuals and businesses in Ontario, see http://www.ipc.on.ca/ or
+http://www.pipeda.org/
+

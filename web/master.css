@@ -1,0 +1,227 @@
+/****************************************************************************
+ *
+ * Pick-Up System - Screen media CSS
+ *
+ * Copyright (C) 2003-2005, Three Wise Men Software Development and Consulting
+ * Written by Steve Vetzal
+ *
+ * SEE ACCOMPANYING FILES FOR REVISION HISTORY AND FULL LICENSE AGREEMENT
+ */
+
+body
+{
+    background-color: #444444;
+    margin: 6px;
+}
+
+p,li,td,div
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+th
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #d0d0d0;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+}
+
+table
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+h1
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.label
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-align: right;
+    padding: 4px;
+    background-color: #f0f0ff;
+}
+
+.data
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px;
+    background-color: #f0f0ff;
+}
+
+.logout
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+    text-align: right;
+}
+
+.notify
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: left;
+}
+
+.menu
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+}
+
+.listleft
+{
+    width: 200px;
+    height: 300px;
+}
+
+.listright
+{
+    width: 200px;
+    height: 300px;
+}
+
+.modifycolumns
+{
+    text-align: right;
+}
+
+.hi
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #f0f0ff;
+    padding: 1px;
+}
+
+.lo
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #e0e0ff;
+    padding: 1px;
+}
+
+.button
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.cautionbutton
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #aa0000;
+}
+
+.noprint
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.shell
+{
+    width: 760px;
+    background-color: #ffffff;
+    padding: 16px;
+}
+
+.copyright
+{
+    width: 720px;
+    text-align: center;
+    padding: 4px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.copyrighttext:link,.copyrighttext:visited,.copyrighttext:active
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.copyrighttext:hover
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.field
+{
+    color: #000000;
+    background-color: #ffffff;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #777777;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.formarea
+{
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    padding: 16px;
+}
+
+.required
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.warn
+{
+    border: 1px solid #ffcc00;
+    background-color: #ffffee;
+    padding: 8px;
+}
+
+.strong_warn
+{
+    border: 1px solid #ff8888;
+    background-color: #ffeeee;
+    padding: 8px;
+}

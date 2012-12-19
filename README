@@ -1,0 +1,113 @@
+Form Collector - PHP Edition
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The files in this archive are Copyright (C) 2003-2006 Three Wise Men
+Software Development and Consulting, please see the LICENSE file for details.
+
+THIS SOFTWARE IS NOT FREE SOFTWARE - please see the LICENSE file for details.
+
+
+System Requirements
+-------------------
+
+Form Collector PHP Edition requires a PHP enabled web server, with PHP
+version 4.1.0 or higher.
+
+
+Quick-Start
+-----------
+
+See docs/manual.txt for full instructions.
+
+Copy all files in web/ to a folder on your web site.
+
+Adjust your config.ini file with values specific to your hosting environment.
+
+Acknowledgements
+----------------
+
+We would like to extend special thanks to the following customers for
+their valued feedback that lead to new features and better documentation:
+
+  Brian Feeney
+  Kevin Klein
+  Peter Munro
+  Fred Read
+  Sandi Gauder
+  Glenn Taylor
+
+Change Log
+~~~~~~~~~~
+
+Date        Rev     Notes
+----------- ------- -------------------------------------------------------
+
+2007-07-29  2.4.0   - rewrote argument passing, resolves problems with
+                      some PHP interpreters and import_request_variables
+                    - did full warning hunt on 3 drastically different
+                      hosts
+                    - enhanced to use redirect-after-post pattern for
+                      more consistent web experience
+                    - qualified PHP5 compatibility, now that PHP4 has
+                      an end-of-life date
+                    - added self-cleaning abilities to mop up invalid
+                      form and response data from corrupted data files
+2007-07-22  2.3.3   - fixed a bug where you couldn't view a particular
+                      form's responses
+2007-06-30  2.3.2   - fixed bug where when you view a response it shows
+                      a blank page and creates a new blank response
+                    - fixed bug where you could not delete respones
+
+...
+
+2006-01-01  2.2.3   - changed multiple-value elements to show one-per-line
+                      instead of comma-separated
+2005-11-22  2.2.2   - changed internal variable names to avoid conflict
+                      with equivilent names in posted forms
+2005-11-15  2.2.1   - changed email to ini_set the from address for hosts
+                      that require it
+                    - added from address and subject line marker in
+                      configuration file
+2005-11-12  2.2.0   - cleaned up many warning messages issued by PHP
+                    - resolved problem with From address on Windows and
+                      some Linux hosts
+                    - new help system when there are problems accessing
+                      the datafile, reasonable suggestions are now made
+                      based upon the analyzed environment
+                    - if there are problems writing to the datafile, the
+                      receptor presents an error message instead of
+                      forwarding to the "thankyou" page.
+2005-09-29  2.1.0   - changed form indexing to use a hash to accomodate
+                      very large forms
+                    - added new feature to download formatted columns as
+                      CSV, renamed old download function to "Download RAW"
+                    - OLD DATA FILES ARE NOT COMPATIBLE WITH THIS RELEASE!
+                      You must delete your old data file if you wish to
+                      upgrade from 2.0 (be sure to download your data
+                      first!)
+2005-07-04  2.0.0   - new storage structure
+                    - ability to delete specific form responses
+                    - new configuration loader
+                    - logging and audit trail support
+                    - now utilizes standard TWM Email module
+2005-02-23  1.0.6   - minor documentation updates
+2004-04-12  1.0.5   - fixed bug in email reference to form collector when
+                      it is securely hosted
+                    - changed relative GET references in interface to
+                      include script name
+
+2004-02-08  1.0.4   - added system settings form to change notification
+                      email address and password
+                    - added visitor name in email subject if available
+                    - link back to form collector in notification email
+
+2004-01-13  1.0.3   - Fixed bug in relabelling fields (orig. field name not
+                      shown)
+
+2004-01-03  1.0.2   - Improvements to quote-handling (CSV and on-screen)
+                    - Improvements on array handling
+
+2003-12-31  1.0.1   - Visual tweaking (printable views)
+                    - New form postings appear in bold-face until viewed
+
+2003-12-27  1.0.0   - Initial release

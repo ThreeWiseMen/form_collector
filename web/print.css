@@ -1,0 +1,163 @@
+/****************************************************************************
+ *
+ * Pick-Up System - Print media CSS
+ *
+ * Copyright (C) 2003-2005, Three Wise Men Software Development and Consulting
+ * Written by Steve Vetzal
+ *
+ * SEE ACCOMPANYING FILES FOR REVISION HISTORY AND FULL LICENSE AGREEMENT
+ */
+
+body
+{
+    width: 7.5in;
+}
+
+p,li,td,div
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+th
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+table
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+h1
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    text-align: right;
+    padding: 3pt;
+}
+
+.data
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 3pt;
+}
+
+.logout
+{
+    display: none;
+}
+
+.listleft
+{
+    width: 200px;
+    height: 300px;
+}
+
+.listright
+{
+    width: 200px;
+    height: 300px;
+}
+
+.modifycolumns
+{
+    text-align: right;
+}
+
+.hi
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background-color: #f0f0ff;
+    padding: 1px;
+}
+
+.lo
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    background-color: #e0e0ff;
+    padding: 1px;
+}
+
+.button
+{
+    display: none;
+}
+
+.noprint
+{
+    display: none;
+}
+
+.page
+{
+}
+
+.copyright
+{
+    display: none;
+}
+
+.copyrighttext:link,.copyrighttext:visited,.copyrighttext:active
+{
+    display: none;
+}
+
+.copyrighttext:hover
+{
+    display: none;
+}
+
+.field
+{
+    color: #000000;
+    background-color: #ffffff;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.formarea
+{
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    padding: 16px;
+}
+
+.required
+{
+    display: none;
+}
+
